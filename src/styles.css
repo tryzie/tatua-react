@@ -1,0 +1,385 @@
+/* src/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #2f243a;
+    padding: 10px 10px;
+    color: white;
+    margin-top: -25px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.logo img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+.logo span {
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    border-bottom: 1px solid #ffffff;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links .active {
+    color: #c87f6d;
+    font-weight: bold;
+}
+
+/* Form Styles */
+#form-container {
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+}
+
+#form-container p {
+    margin-bottom: 20px;
+    color: #615f5f;
+    font-size: 1.2em;
+}
+
+.form-group,
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    flex: 0.2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #65558f;
+    outline: none;
+}
+
+.checkbox a {
+    color: #65558f;
+    justify-content: left;
+}
+
+.checkbox {
+    flex: 0.5;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.radio-group input,
+#terms {
+    accent-color: #65558f;
+    cursor: pointer;
+}
+
+.submit-btn {
+    justify-content: left;
+    background-color: #65558f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 20px auto 0;
+}
+
+.submit-btn:hover {
+    background-color: #65558f;
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+#table-container {
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+}
+
+.table-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: right;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+.sort-btn,
+.filter-btn,
+.refresh-btn {
+    color: #5856d6;
+    margin-right: 10px;
+}
+
+.active-btn {
+    background-color: #8b0000;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active-btn span {
+    margin-left: 10px;
+}
+
+.reset-icon {
+    cursor: pointer;
+}
+
+.reset-icon img {
+    width: 50px;
+    height: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 2px;
+    text-align: left;
+    border: none;
+    margin-bottom: 30px;
+}
+
+th {
+    color: #4f227d;
+    border-bottom: 2px solid #4d2774;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #dddde;
+    font-size: 20px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Modal and Popup */
+.modal-container,
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal,
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    max-width: 500px;
+    width: 90%;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2f243a;
+    color: #db8a74;
+    margin: -20px -20px 20px -20px;
+    padding: 10px 20px;
+}
+
+.popup-header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.popup-header-left img {
+    margin-right: 10px;
+}
+
+.popup-header-left h3 {
+    color: #db8a74;
+    margin: 0;
+}
+
+.sort-field,
+.filter-field {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sort-field select,
+.filter-field select,
+.sort-field input,
+.filter-field input {
+    padding: 0.25rem;
+    flex: 1;
+}
+
+.popup-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cancel {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#reset-sort,
+#reset-filter {
+    background-color: white;
+    color: #7e1913;
+    border: none;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-sort,
+#submit-filter {
+    background-color: #4f227d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-sort,
+#add-filter {
+    color: #5856d6;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.success-popup {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.success-popup h3 {
+    color: #4caf50;
+    background-color: lightblue;
+}

@@ -375,11 +375,10 @@ td {
 }
 
 .success-popup {
-    background-color: green;
-    color: whitesmoke;
+    background-color: white;
+    color: green;
 }
 
 .success-popup h3 {
-    color: #4caf50;
-    background-color: lightblue;
+    color: green ;
 }
